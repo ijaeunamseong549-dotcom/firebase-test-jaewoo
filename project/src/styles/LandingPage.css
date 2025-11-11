@@ -1,0 +1,166 @@
+/* 전체 컨테이너 */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 헤더 */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo { font-weight: 700; font-size: 1.3rem; color: #222; }
+.header-buttons { display:flex; gap:10px; }
+
+/* 버튼 스타일 */
+.btn-outline {
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-fill {
+  background:#ff6b6b; color:#fff; padding:8px 14px; border-radius:8px; text-decoration:none;
+}
+
+/* 메인 영역: 좌-중-우 레이아웃 */
+.landing-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+/* 전체 이미지를 감싸는 래퍼 (좌중우 정렬) */
+.landing-images {
+  display: flex;
+  align-items: center;       /* 컬럼들 가운데 정렬 (수직 중앙) */
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* 왼쪽/오른쪽 컬럼 공통 */
+.left-images,
+.right-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 컬럼 전체 높이에 걸쳐 이미지 골고루 배치 */
+  gap: 20px;
+  width: 240px;                   /* 컬럼 너비 고정: 균형 맞춤 */
+  height: 460px;                  /* 컬럼 높이 고정: 중앙 텍스트와 맞추기 */
+  box-sizing: border-box;
+}
+
+/* 이미지 박스: 항상 동일 크기, overflow:hidden으로 잘림 방지 */
+.img-box {
+  width: 100%;
+  height: calc((460px - 40px) / 3); /* 3개의 이미지가 gap 포함해 컬럼 높이에 맞게 분배 */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* 이미지 자체: object-fit 유지 */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+  transition: transform .25s ease;
+}
+
+.img-box img:hover {
+  transform: scale(1.03);
+}
+
+/* 중앙 텍스트: 컬럼 높이에 맞춰 수직 중앙 정렬 */
+.landing-text {
+  max-width: 520px;
+  text-align: center;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.landing-text h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #222;
+  margin: 0;
+  font-weight: 700;
+}
+
+.landing-text p {
+  margin: 0;
+  color: #666;
+}
+
+/* CTA 버튼 */
+.main-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ff6b6b;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 푸터 */
+.landing-footer {
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 16px 8px;
+}
+
+/* ========== 반응형 ========== */
+/* 태블릿 이하: 컬럼 높이 줄이고 이미지 크기 줄임 (세로 스택 아님: 여전히 왼/가운데/오) */
+@media (max-width: 1100px) {
+  .landing-images { gap: 40px; max-width: 1000px; }
+  .left-images, .right-images { width: 200px; height: 380px; }
+  .img-box { height: calc((380px - 40px) / 3); }
+  .landing-text h2 { font-size: 1.8rem; }
+}
+
+/* 모바일: 좌/우/중 세로 정렬(스택) */
+@media (max-width: 700px) {
+  .landing-images {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .left-images, .right-images {
+    width: 320px;         /* 모바일에선 한 줄에 이미지 3개가 가로로 나열될 수 있게 처리(또는 바꾸고싶으면 조정) */
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .img-box {
+    width: 30%;
+    height: 120px;
+  }
+
+  .landing-text { order: 2; }
+}

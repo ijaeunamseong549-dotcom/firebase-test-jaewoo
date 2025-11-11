@@ -1,0 +1,112 @@
+/* ===== 전체 레이아웃 ===== */
+.signup-container {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* ===== 회원가입 박스 ===== */
+.signup-box {
+  background: #ffffff;
+  width: 420px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== 제목 ===== */
+.signup-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* ===== 입력 폼 ===== */
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signup-form input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 0 15px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.signup-form input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+/* ===== 회원가입 버튼 ===== */
+.signup-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  height: 45px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #ff4d4d;
+}
+
+/* ===== 안내 문구 ===== */
+.signup-footer {
+  margin-top: 20px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.signup-footer a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 480px) {
+  .signup-box {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  .signup-box h2 {
+    font-size: 1.5rem;
+  }
+}

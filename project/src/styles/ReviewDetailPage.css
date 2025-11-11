@@ -1,0 +1,115 @@
+.detail-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  .detail-container h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .detail-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .back-btn {
+    border: none;
+    background: none;
+    color: #ff6b6b;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .btn-edit, .btn-delete, .btn-save, .btn-cancel {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+  
+  .btn-delete {
+    background-color: #777;
+  }
+  
+  .btn-edit:hover, .btn-save:hover {
+    background-color: #ff4d4d;
+  }
+  
+  .btn-delete:hover {
+    background-color: #555;
+  }
+  
+  .edit-input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .edit-textarea {
+    width: 90%;
+    height: 120px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    resize: none;
+    margin: 10px 0;
+  }
+  
+  .edit-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .star {
+    font-size: 32px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s ease;
+  }
+  
+  .star:hover {
+    color: #ff9f9f;
+  }
+  
+  .star.selected {
+    color: #ff6b6b;
+  }
+  
