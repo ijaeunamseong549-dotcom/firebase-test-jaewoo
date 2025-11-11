@@ -41,28 +41,27 @@ Firebase를 기반으로 한 React SPA(Single Page Application)입니다.
 | **Hosting** | Firebase Hosting |
 | **Version Control** | Git / GitHub |
 
+
 ---
-
 ## 📁 폴더 구조
-src/
-├── App.js # 전체 라우팅 관리
-├── firebase.js # Firebase 초기 설정
-├── components/
-│ └── pages/
-│ ├── LandingPage.js
-│ ├── LoginPage.js
-│ ├── SignUpPage.js
-│ ├── MainPage.js
-│ ├── CreateReviewPage.js
-│ └── ReviewDetailPage.js
-├── styles/
-│ ├── LandingPage.css
-│ ├── LoginPage.css
-│ ├── SignUpPage.css
-│ ├── MainPage.css
-│ └── CreateReviewPage.css
-└── index.js
-
+    src/
+    ├── App.js # 전체 라우팅 관리
+    ├── firebase.js # Firebase 초기 설정
+    ├── components/
+    │ └── pages/
+    │ ├── LandingPage.js
+    │ ├── LoginPage.js
+    │ ├── SignUpPage.js
+    │ ├── MainPage.js
+    │ ├── CreateReviewPage.js
+    │ └── ReviewDetailPage.js
+    ├── styles/
+    │ ├── LandingPage.css
+    │ ├── LoginPage.css
+    │ ├── SignUpPage.css
+    │ ├── MainPage.css
+    │ └── CreateReviewPage.css
+    └── index.js
 ---
 
 ## 💾 Firestore 데이터 구조 예시
